@@ -1300,7 +1300,7 @@ class StochKitSolver(GillesPySolver):
         simulation.
     """
     def __init__(self, algorithm=None):
-        if algorithm is not in ['SSA', 'tau_leaping']:
+        if algorithm not in ['SSA', 'tau_leaping']:
             raise ValueError("Unknown algorithm. Only SSA and "
                              "tau_leaping available. "
                              "Got {0}".format(algorithm))
