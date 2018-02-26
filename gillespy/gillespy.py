@@ -1344,12 +1344,11 @@ class StochKitSolver(GillesPySolver):
             args += ' --method ' + str(method)
 
 
-        self = StochKitSolver()
-        return GillesPySolver.run(self, model,t, number_of_trajectories,
-                                  increment, seed, stochkit_home,
-                                  self.algorithm,
-                                  job_id, extra_args=args, debug=debug,
-                                  show_labels=show_labels)
+        return super(StochKitSolver, self).run(self, model,t, number_of_trajectories,
+                                               increment, seed, stochkit_home,
+                                               self.algorithm,
+                                               job_id, extra_args=args, debug=debug,
+                                               show_labels=show_labels)
 
 
     def get_trajectories(self, outdir, debug=False, show_labels=False):
