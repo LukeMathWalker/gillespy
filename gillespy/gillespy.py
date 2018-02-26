@@ -1065,7 +1065,7 @@ class StochMLDocument():
         return e
 
 
-class GillesPySolver():
+class GillesPySolver(object):
     """
     Abstract class for a solver. This is generally called from within a
     gillespy Model through the Model.run function. Returns simulation
