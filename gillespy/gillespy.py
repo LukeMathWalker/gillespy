@@ -1346,7 +1346,7 @@ class StochKitSolver(GillesPySolver):
 
         return super(StochKitSolver, self).run(self, model,t, number_of_trajectories,
                                                increment, seed, stochkit_home,
-                                               self.algorithm,
+                                               algorithm=self.algorithm,
                                                job_id, extra_args=args, debug=debug,
                                                show_labels=show_labels)
 
